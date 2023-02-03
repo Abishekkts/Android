@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+ <ImageView
+     android:layout_width="match_parent"
+     android:layout_height="220dp"
+     android:src="@drawable/wall1"
+     android:scaleType="centerCrop"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintTop_toTopOf="parent"/>
+
+ <androidx.constraintlayout.widget.ConstraintLayout
+     android:id="@+id/cl1"
+     android:layout_width="match_parent"
+     android:layout_height="0dp"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintTop_toTopOf="parent"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintVertical_bias="1"
+     app:layout_constraintHeight_percent="0.78"
+     android:background="@drawable/view_bg">
+
+ <com.google.android.material.tabs.TabLayout
+     android:id="@+id/tab_layout"
+     android:layout_marginTop="50dp"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     app:layout_constraintVertical_bias="0"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintTop_toTopOf="parent"
+     app:layout_constraintBottom_toBottomOf="parent"/>
+
+ <androidx.viewpager.widget.ViewPager
+     android:id="@+id/view_pager"
+     android:layout_width="match_parent"
+     android:layout_height="0dp"
+     app:layout_constraintVertical_bias="0"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintTop_toBottomOf="@id/tab_layout"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintHeight_percent=".65"/>
+
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+      android:id="@+id/gmail"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/gm"
+      android:backgroundTint="@color/white"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/view_pager"
+      app:layout_constraintBottom_toBottomOf="parent"
+      />
+
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+      android:id="@+id/twitter"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/twitter"
+      android:backgroundTint="@color/white"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="@id/gmail"
+      app:layout_constraintTop_toBottomOf="@id/view_pager"
+      app:layout_constraintBottom_toBottomOf="parent"
+      />
+
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+      android:id="@+id/facebook"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/facebook"
+      android:backgroundTint="@color/white"
+      app:layout_constraintStart_toStartOf="@id/gmail"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/view_pager"
+      app:layout_constraintBottom_toBottomOf="parent"
+      />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+ <ImageView
+     android:id="@+id/panda"
+     android:layout_width="70dp"
+     android:layout_height="70dp"
+     android:src="@drawable/panda"
+     android:layout_marginBottom="40dp"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintTop_toTopOf="parent"
+     app:layout_constraintBottom_toTopOf="@id/cl1"/>
+
+ <TextView
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text="PandaXpress"
+     android:textStyle="bold"
+     android:textColor="@color/white"
+     android:layout_marginTop="5dp"
+     android:layout_marginBottom="15dp"
+     android:textSize="30dp"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintTop_toBottomOf="@id/panda"
+     app:layout_constraintBottom_toTopOf="@id/cl1"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
